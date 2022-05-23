@@ -113,7 +113,7 @@
           },
           onApprove: (data, actions) => {
             return actions.order.capture().then(function (orderData) {
-              var url = "http://127.0.0.1:8000/check-out";
+              var url = "http://127.0.0.1:8000/paypal";
               return fetch(url, {
                 method: "POST",
                 headers: { "X-CSRFToken": csrftoken },
